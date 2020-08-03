@@ -100,7 +100,6 @@ class _SideBarLayout extends State<SideBarLayout> {
               fontWeight: FontWeight.w600,
             ),
             ),
-
           )
         ],
       ),

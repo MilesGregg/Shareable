@@ -4,6 +4,7 @@ import 'package:Shareable/commons/profile_info_big_card.dart';
 import 'package:Shareable/commons/profile_info_card.dart';
 import 'package:Shareable/styleguide/colors.dart';
 import 'package:Shareable/styleguide/text_style.dart';
+import 'package:Shareable/utilities/constants.dart';
 import 'package:flutter/material.dart';
 
 class Profile extends StatelessWidget {
@@ -53,8 +54,50 @@ class Profile extends StatelessWidget {
               Expanded(
                 flex: 7,
                 child: Container(
-                  padding: const EdgeInsets.only(top: 50),
+                  padding: const EdgeInsets.only(top: 10),
                   color: Color(0x1AFFFFFF),
+                  child: ListView(
+                    children: [
+                      Card(
+                        color: Colors.blue,
+                        elevation: 2,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)
+                        ),
+                        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                        child: ListTile(
+                          title: TextField(
+                            keyboardType: TextInputType.url,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'OpenSans'
+                            ),
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              contentPadding: EdgeInsets.only(top: 0.0),
+                              hintText: 'Enter your Instagram',
+                              hintStyle: kHintTextStyle
+                            ),
+                          ),
+                          leading: ClipOval(
+                            child: Image.asset(
+                              "assets/logos/instagram.png",
+                              width: 50,
+                              height: 50,
+                            ),
+                          ),
+                          /*trailing: TextField(
+                            keyboardType: TextInputType.url,
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              contentPadding: EdgeInsets.only(top: 14.0),
+                              hintText: 'TEST'
+                            ),
+                          ),*/
+                        ),
+                      )
+                    ],
+                  ),
                   /*child: Table(
                     children: [
                       TableRow(
